@@ -20,7 +20,7 @@ public class VendorStorage {
         vendorRepo.save(vendor);
     }
 
-    public Iterable<Vendor>getAllVendors() {
+    public Iterable<Vendor> getAllVendors() {
         return vendorRepo.findAll();
     }
 

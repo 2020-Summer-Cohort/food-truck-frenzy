@@ -31,9 +31,10 @@ public class LocationController {
 
         return "map-template";
     }
+
     @PostMapping("/locations")
     public String addLocationToVendor(long vendorId, String address, double latitude,
-                                      double longitude, String date, boolean recurring, String openHours){
+                                      double longitude, String date, boolean recurring, String openHours) {
         LocalDate localDate = LocalDate.parse(date);
         Vendor vendor = vendorStorage.findById(vendorId);
         Location location = new Location(address, latitude, longitude, localDate, recurring, openHours, vendor);

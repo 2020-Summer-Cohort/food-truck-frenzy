@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class AdminController {
@@ -19,25 +18,25 @@ public class AdminController {
     }
 
     @GetMapping("/new-vendor")
-    public String newVendorPage(Model model){
+    public String newVendorPage(Model model) {
         return "new-vendor-template";
     }
 
     @GetMapping("/admin/{name}")
-    public String findByName(@PathVariable String name, Model model){
+    public String findByName(@PathVariable String name, Model model) {
         model.addAttribute("vendors", vendorStorage.findByName(name));
         return "admin-profile-template";
     }
 
     @GetMapping("/admin/events/{name}")
-    public String findAdminEventByName(@PathVariable String name, Model model){
+    public String findAdminEventByName(@PathVariable String name, Model model) {
         model.addAttribute("vendors", vendorStorage.getAllVendors());
         model.addAttribute("events", eventStorage.findByName(name));
         return "admin-event-page-template";
     }
 
     @GetMapping("/new-event")
-    public String newEventPage(Model model){
+    public String newEventPage(Model model) {
         return "new-event-form-template";
     }
 

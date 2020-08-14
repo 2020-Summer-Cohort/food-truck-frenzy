@@ -6,15 +6,6 @@
 }
 
 :root {
-    /* --color1-pale-silver: hsla(38, 8%, 73%, 1);
-    --color-2-yellow-munsell: hsla(51, 85%, 52%, 1);
-    --color3-red-orange-color-wheel: hsla(15, 100%, 50%, 1);
-    --color4-portland-orange: rgb(248, 136, 105);
-    --color5-rich-black-fogra-39: hsla(180, 20%, 4%, 1);
-    --header-font: "Ranchers", cursive;
-    --sub-header-font: "Krona One", sans-serif;
-    --content-font: "Nunito", sans-serif; */
-
     --color1-white: rgb(255, 255, 255);
     --color-2-yellow-munsell: rgb(255, 226, 60);
     --color3-orange-peel: rgb(255, 159, 28);
@@ -22,7 +13,7 @@
     --color5-rich-black-fogra-39: hsla(180, 20%, 4%, 1);
     --header-font: "Ranchers", cursive;
     --sub-header-font: "Krona One", sans-serif;
-    --content-font: "Nunito", sans-serif; 
+    --content-font: "Nunito", sans-serif;
 }
 
 a:link {

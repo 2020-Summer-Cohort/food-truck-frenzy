@@ -59,7 +59,7 @@
         <div class="single-event-info">
             <p th:text="${events.getDateString()}"></p>
             <p th:text="${events.address}"></p>
-            <p th:text="${events.times}"></p><br />
+            <p th:text="${events.times}"></p><br/>
             <h3>Food Trucks</h3>
             <ul th:each="vendor:${events.vendors}" class="hours">
                 <li th:text="${vendor.name}">Schmidt's Food Truck</li>

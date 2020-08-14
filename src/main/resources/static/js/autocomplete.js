@@ -3,7 +3,7 @@ function initAutocomplete() {
     // geographical location types.
     autocomplete = new google.maps.places.Autocomplete(
         document.getElementById("autocomplete"),
-        { types: ["geocode"] }
+        {types: ["geocode"]}
     );
     // Avoid paying for data that you don't need by restricting the set of
     // place fields that are returned to just the address components.
@@ -48,11 +48,11 @@ function geolocate() {
 
 const mapDiv = document.getElementById("map")
 
-function initMap () {
-    const location = { lat: latitude, lng: longitude };
+function initMap() {
+    const location = {lat: latitude, lng: longitude};
     const map = new google.maps.Map(mapDiv, {
         zoom: 15,
         center: location,
     });
-    const marker = new google.maps.Marker({ position: location, map: map });
+    const marker = new google.maps.Marker({position: location, map: map});
 }

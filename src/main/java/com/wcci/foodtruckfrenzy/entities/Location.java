@@ -11,7 +11,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 @Entity
-public class Location implements Comparable<Location>{
+public class Location implements Comparable<Location> {
     @Id
     @GeneratedValue
     private long id;

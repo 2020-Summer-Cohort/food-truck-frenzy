@@ -79,7 +79,7 @@ public class Event implements Comparable<Event> {
         return locationName;
     }
 
-    public String getDateString(){
+    public String getDateString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         return date.format(formatter);
     }

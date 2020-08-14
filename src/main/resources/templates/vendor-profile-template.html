@@ -17,7 +17,8 @@
         <input type="text" placeholder="Enter Vendor Name"/>
         <input type="password" placeholder="Enter Password"/>
         <a th:href="@{'/new-vendor'}">
-            <button type="button">Submit</button></a>
+            <button type="button">Submit</button>
+        </a>
     </form>
 </div>
 
@@ -27,7 +28,6 @@
         <h1>Food Truck Frenzy</h1>
         <img class="header-pic" src="/images/header-pic.png"/>
     </div>
-    <!-- <p>Vendor Log-In</p> -->
 </header>
 
 <nav>
@@ -66,16 +66,13 @@
         </div>
 
         <div class="google-map" id="map">
-<!--            <iframe-->
-<!--                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12222.710631860731!2d-83.0119444!3d40.0156472!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcdd59ddd5b5cdbbf!2sRay%20Ray&#39;s%20Hog%20Pit%20Clintonville!5e0!3m2!1sen!2sus!4v1595948884722!5m2!1sen!2sus"-->
-<!--            ></iframe>-->
         </div>
     </div>
-        <div class="upcoming-events">
-            <h3>Upcoming Events</h3>
-            <a th:href="@{'/events/'+${vendors.getNextEvent().name}}">
+    <div class="upcoming-events">
+        <h3>Upcoming Events</h3>
+        <a th:href="@{'/events/'+${vendors.getNextEvent().name}}">
             <p th:text="${vendors.getNextEvent().name}"></p></a>
-        </div>
+    </div>
 </div>
 </body>
 <script th:inline="javascript">

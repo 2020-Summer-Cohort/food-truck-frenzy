@@ -24,20 +24,22 @@ public class EventController {
     }
 
     @GetMapping("/events")
-    public String showAllEvents(Model model){
+    public String showAllEvents(Model model) {
         ArrayList<Event> sortedEvents = new ArrayList<>(eventStorage.getAllEvents());
         Collections.sort(sortedEvents);
         model.addAttribute("events", sortedEvents);
         return "all-events-template";
     }
+
     @GetMapping("/events/{name}")
-    public String findByName(@PathVariable String name, Model model){
+    public String findByName(@PathVariable String name, Model model) {
         model.addAttribute("events", eventStorage.findByName(name));
         return "event-page-template";
     }
+
     @PostMapping("/events")
     public String addEvent(String name, String date, String imagePath, String address, String times, double latitude,
-                           double longitude, String locationName){
+                           double longitude, String locationName) {
         LocalDate localDate = LocalDate.parse(date);
         Event eventToAdd = new Event(name, localDate, imagePath, address, times, latitude, longitude, locationName);
         eventStorage.save(eventToAdd);

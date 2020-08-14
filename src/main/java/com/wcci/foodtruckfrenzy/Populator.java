@@ -24,7 +24,7 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        LocalDate date1 = LocalDate.of(2020, 8,9 );
+        LocalDate date1 = LocalDate.of(2020, 8, 9);
 
         Event event1 = new Event("Super Fun Event", LocalDate.of(2020, Month.AUGUST, 31), "../../images/HometownMarket.jpg", "3895 Columbus Rd, Centerburg, Ohio 43011", "3:00pm - 8:00pm", 40.3002819, -82.7057998, "Hometown Market");
         Event event2 = new Event("2020 Columbus Summer Wine Festival", LocalDate.of(2020, Month.AUGUST, 22), "../../images/ColumbusSummerWineFestival.jpg", "160 S. High Street, Columbus, Ohio 43215", "12:00pm - 8:00pm", 39.9688641, -83.0562056, "John F. Wolfe Columbus Commons");
